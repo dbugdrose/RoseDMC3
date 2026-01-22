@@ -3,8 +3,8 @@ const cpuEnterBtn = document.getElementById("cpuEnterBtn");
 const cpuResultParent = document.getElementById("cpuResultParent");
 
 let data;
-counter = 0;
-gameOver = 1;
+let counter = 0;
+let gameOver = 1;
 
 async function fetchAPI(){
 const response = await fetch(`https://rpsls2526dr-e6gggpduhsdmg3d8.westus3-01.azurewebsites.net/api/rpsls/TypeRockPaperScissorsLizardOrSpock/${cpuUserInput.value}`);
