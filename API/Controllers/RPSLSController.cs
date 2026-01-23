@@ -18,7 +18,7 @@ namespace API.Controllers
             _rpslsServices = rpslsServices;
         }
 
-            [HttpGet("TypeRockPaperScissorsLizardOrSpock/{userinput}")]
+            [HttpGet("CPU/{userinput}")]
         public string Rpsls(string userinput)
         {
             return _rpslsServices.RandomChoice(userinput);
