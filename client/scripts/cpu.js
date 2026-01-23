@@ -75,24 +75,3 @@ cpuUserInput.addEventListener("keypress", async (event) => {
     await cpuFetchAPI();
     }
 })
-
-pvpEnter1Btn.addEventListener("click", async () => {
-    await pvpFetchAPI();
-})
-
-pvpEnter1Btn.addEventListener("keypress", async (event) => {
-    if (event.key === "Enter")
-    {
-    await pvpFetchAPI();
-    }
-})
-pvpEnter2Btn.addEventListener("click", async () => {
-    await pvpFetchAPI();
-})
-
-pvpEnter2Btn.addEventListener("keypress", async (event) => {
-    if (event.key === "Enter")
-    {
-    await pvpFetchAPI();
-    }
-})
