@@ -30,5 +30,28 @@ namespace API.Services
             else 
             {return "Please enter only either 'rock', 'paper', 'scissors', 'lizard', or 'spock'.";}
         }
+
+
+        public string PVP(string user1input, string user2input)
+        { string [] choices = ["ROCK", "PAPER", "SCISSORS", "LIZARD", "SPOCK"];
+            string result = "";
+            if (choices.Contains(user1input.ToUpper()) && choices.Contains(user2input.ToUpper()) )
+            {
+            if (user1input.ToUpper() == user2input.ToUpper())
+            {result = "It's a tie!";}
+
+    else if (user1input.ToUpper() == "ROCK" && (user2input.ToUpper() == "SCISSORS" || user2input.ToUpper() == "LIZARD") ||
+            (user1input.ToUpper() == "PAPER" && (user2input.ToUpper() == "ROCK" || user2input.ToUpper() == "SPOCK")) ||
+            (user1input.ToUpper() == "SCISSORS" && (user2input.ToUpper() == "PAPER" || user2input.ToUpper() == "LIZARD")) ||
+            (user1input.ToUpper() == "LIZARD" && (user2input.ToUpper() == "PAPER" || user2input.ToUpper() == "SPOCK")) ||
+            (user1input.ToUpper() == "SPOCK" && (user2input.ToUpper() == "ROCK" || user2input.ToUpper() == "SCISSORS")))
+        {result = "Player 1 won! Bazinga!";}
+    else {result = "Player 2 won! Bazinga!";}
+
+            return "Player 1 entered... " + user1input.ToUpper() + "! Player 2 chose... " + user2input.ToUpper() + "! " + result;
+            }
+            else 
+            {return "Please enter only either 'rock', 'paper', 'scissors', 'lizard', or 'spock'.";}
+        }
     }
 }

@@ -13,7 +13,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("RPSLS", policy =>
     {
-        policy.WithOrigins("http://localhost:5500", "http://127.0.0.1:5500")
+        policy.WithOrigins("http://localhost:5500", "http://localhost:5254", "http://127.0.0.1:5500", "http://rpsls2526dr-e6gggpduhsdmg3d8.westus3-01.azurewebsites.net/")
         .AllowAnyHeader()
         .AllowAnyMethod();
     });

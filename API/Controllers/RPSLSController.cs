@@ -23,5 +23,11 @@ namespace API.Controllers
         {
             return _rpslsServices.RandomChoice(userinput);
         }
+
+        [HttpGet("PVP/{user1input}/{user2input}")]
+        public string pvp(string user1input, string user2input)
+        {
+            return _rpslsServices.PVP(user1input, user2input);
+        }
     }
 }
