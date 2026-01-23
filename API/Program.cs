@@ -11,9 +11,10 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<RPSLSServices>();
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("RPSLS", policy =>
+    options.AddPolicy("RPSLS",
+    builder =>
     {
-        policy.WithOrigins("http://localhost:5500", "http://localhost:5254", "http://127.0.0.1:5500", "http://rpsls2526dr-e6gggpduhsdmg3d8.westus3-01.azurewebsites.net/")
+        builder.AllowAnyOrigin()
         .AllowAnyHeader()
         .AllowAnyMethod();
     });
