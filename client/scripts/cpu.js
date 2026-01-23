@@ -25,7 +25,7 @@ btn2.addEventListener("click", () => {
     gameOver = 3;
 })
 
-btn1.addEventListener("click", () => {
+btn3.addEventListener("click", () => {
     counter = 0;
     gameOver = 7;
 })
