@@ -18,16 +18,11 @@ namespace API.Controllers
             _rpslsServices = rpslsServices;
         }
 
-            [HttpGet("CPU/{userinput}")]
-        public string Rpsls(string userinput)
+            [HttpGet("CPU")]
+        public string Rpsls()
         {
-            return _rpslsServices.RandomChoice(userinput);
+            return _rpslsServices.RandomChoice();
         }
 
-        [HttpGet("PVP/{user1input}/{user2input}")]
-        public string pvp(string user1input, string user2input)
-        {
-            return _rpslsServices.PVP(user1input, user2input);
-        }
-    }
-}
+
+    }}
